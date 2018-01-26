@@ -29,11 +29,11 @@ void print_usage()
 	cout << "Usage" << endl;
 	cout << "-----" << endl;
 	cout << "Run with defaul values of parameters:" << endl;
-	cout << "    CarND - PID - Controller - Project.exe" << endl;
+	cout << "    CarND-PID-Controller-Project.exe" << endl;
 	cout << "Run with fixed values of parameters:" << endl;
-	cout << "    CarND - PID - Controller - Project.exe run <max throttle> <Kp> <Ki> <Kd> <s_Kp> <s_Ki> <s_Kd>" << endl;
+	cout << "    CarND-PID-Controller-Project.exe run <max throttle> <Kp> <Ki> <Kd> <s_Kp> <s_Ki> <s_Kd>" << endl;
 	cout << "Tune parameters to optimize a given metric, starting from given values:" << endl;
-	cout << "    CarND - PID - Controller - Project.exe tune <max throttle> <Kp> <Ki> <Kd> <s_Kp> <s_Ki> <s_Kd> <tune_Kp> <tune_Ki> <tune_Kd> <tune_s_Kp> <tune_s_Ki> <tune_s_Kd>[cte | speed]" << endl;
+	cout << "    CarND-PID-Controller-Project.exe tune <max throttle> <Kp> <Ki> <Kd> <s_Kp> <s_Ki> <s_Kd> <tune_Kp> <tune_Ki> <tune_Kd> <tune_s_Kp> <tune_s_Ki> <tune_s_Kd> [cte | speed]" << endl;
 }
 
 int main(int argc, char* argv[])
