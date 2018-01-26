@@ -151,7 +151,7 @@ int main(int argc, char* argv[])
   bool is_reset = false;    // indicator if we need to stop the current run and proceed to the next values of parameters
 
   h.onMessage([&pid, &pid_v, &iter, &twiddle, &Kp, &Ki, &Kd, &s_Kp, &s_Ki, &s_Kd, &params, &total_err, &mode, &is_reset, 
-	           &max_throttle, &tune_metric, &total_err_cte, &total_speed](uWS::WebSocket<uWS::SERVER> *ws, char *data, size_t length, uWS::OpCode opCode) {
+	           &max_throttle, &tune_metric, &total_err_cte, &total_speed](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
@@ -236,12 +236,12 @@ int main(int argc, char* argv[])
 			  msg = "42[\"steer\"," + msgJson.dump() + "]";
 		  }
 		  
-          ws -> send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+          ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
         }
       } else {
         // Manual driving
         string msg = "42[\"manual\",{}]";
-        ws -> send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+        ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
       }
     }
   });
@@ -261,18 +261,17 @@ int main(int argc, char* argv[])
 	  }
   });
 
-  h.onConnection([&h](uWS::WebSocket<uWS::SERVER>* ws, uWS::HttpRequest req) {
+  h.onConnection([&h](uWS::WebSocket<uWS::SERVER> ws, uWS::HttpRequest req) {
 	  cout << "Connected!!!" << endl;
   });
 
-  h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER>* ws, int code, char *message, size_t length) {
-	  ws -> close();
+  h.onDisconnection([&h](uWS::WebSocket<uWS::SERVER> ws, int code, char *message, size_t length) {
+	  ws.close();
 	  cout << "Disconnected" << endl;
   });
 
   int port = 4567;
-  auto host = "127.0.0.1";
-  if (h.listen(host, port))
+  if (h.listen(port))
   {
 	  cout << "Listening to port " << port << endl;
   }
