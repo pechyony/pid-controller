@@ -256,7 +256,7 @@ Connected!!!
 cte = -4430.28  iter 10000
 New params Kp 1 Ki 0.005 Kd 40 s_Kp 1 s_Ki 0.001 s_Kd 0.00734279
 Connected!!!
-cte = -4699.19  iter 10000
+cte = -4805.99 iter 10000
 best params 1 0.005 40 1 0.001 0.00734279  best_err -4805.99
 New params Kp 1 Ki 0.005 Kd 40 s_Kp 1 s_Ki 0.001 s_Kd 0.00734279
 Connected!!!
