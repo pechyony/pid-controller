@@ -51,9 +51,9 @@ The main executable can be run in three modes:
        Kp - P parameter of PID controller of steering angle
        Ki - I parameter of PID controller of steering angle
        Kd - D parameter of PID controller of steering angle
-       s_Kp - P parameter of PID controller of throttle
-       s_Ki - I parameter of PID controller of throttle
-       s_Kd - D parameter of PID controller of throttle
+       s_Kp - P parameter of PID controller of speed
+       s_Ki - I parameter of PID controller of speed
+       s_Kd - D parameter of PID controller of speed
 
 3. Tuning the parameters of PID controllers:
 
@@ -74,7 +74,7 @@ The main executable can be run in three modes:
        tune_s_Kp - inidicator (0/1) if the value of s_Kp should be tuned 
        tune_s_Ki - indicator (0/1) if the value of s_Ki should be tuned 
        tune_s_Kd - indicator (0/1) if the value of s_Kd should be tuned
-       cte|speed - metric to optimize, "cte" - optimization of cte, "speed" - optimization of speed and cte.
+       cte|speed - metric to optimize, "cte" - optimization of cte, "speed" - joint optimization of speed and cte
 
 ## Reflection
 
