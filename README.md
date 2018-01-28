@@ -65,9 +65,9 @@ The main executable can be run in three modes:
        Kp - initial value of P parameter of PID controller of steering angle
        Ki - initial value of I parameter of PID controller of steering angle
        Kd - initial value of D parameter of PID controller of steering angle
-       s_Kp - initial value of P parameter of PID controller of throttle
-       s_Ki - initial value of I parameter of PID controller of throttle
-       s_Kd - initial value of D parameter of PID controller of throttle 
+       s_Kp - initial value of P parameter of PID controller of speed
+       s_Ki - initial value of I parameter of PID controller of speed
+       s_Kd - initial value of D parameter of PID controller of speed 
        tune_Kp - inidicator (0/1) if the value of Kp should be tuned 
        tune_Ki - indicator (0/1) if the value of Ki should be tuned 
        tune_Kd - indicator (0/1) if the value of Kd should be tuned 
