@@ -30,6 +30,7 @@ setting up a native Windows environment and Visual Studio project:
 ## Files
 * src - folder of source files.
 * videos - folder with the videos of several runs of the car with different values of parameters.
+* images - folder of auxiliary images that are used by README.
 * ide_profiles - folder with IDE profiles for Ecliple and XCode.
 
 ## Usage
